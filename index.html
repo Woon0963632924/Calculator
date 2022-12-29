@@ -14,8 +14,8 @@
             <div class="current" data-operand-current></div>
         </section>
 
-        <section class="calc-button_row">
-            <div class="calc_button_row">
+        <section class="calc-btn_row">
+            <div class="calc_btn_row">
                 <button class="calc_btn double" data-all-clear>C</button>
                 <button class="calc_btn" data-delete>DEL</button>
                 <button class="calc_btn" data-operation>÷</button>
@@ -44,12 +44,25 @@
 
             <div class="calc_btn_row">
                 <button class="calc_btn" data-number>.</button>
-                <button class="calc_btn" data-number>0</button>
-                <button class="calc_btn double" data-number>=</button>
+                <button class="calc_btn double" data-number>0</button>
+                <button class="calc_btn" data-equals>=</button>
             </div>
         </section>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js"></script>`
+
+    <script>
+        const prev = document.querySelector('[data-operand-previous]');
+        const curr = document.querySelector('[data-operand-current]');
+        // make prev and curr comma format
+        if (prev.innerText) {
+            prev.innerText = prev.innerText.toLocaleString('en');
+        }
+        if (curr.innerText) {
+            curr.innerText = curr.innerText.toLocaleString('en');
+        }
+
+    </script>
 </body>
 
 </html>
